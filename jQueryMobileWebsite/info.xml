@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<walimanr>
+<title>Movie Lounge</title>
+
+<Name studentNumber="991452093" Program="Computer Systems Technology Software development and network engineering">
+Manreet Singh Walia
+</Name>
+
+
+<movie>
+
+<movieName image="shaw.jpg">The Shawshank Redemption</movieName>
+
+<moviePlot>Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</moviePlot>
+<cast>
+
+<name1>Tim Robbins</name1>
+<name2>Morgan Freeman</name2>
+<name3>Bob Gunton</name3>
+
+
+</cast>
+
+<review>
+<r1>very motivational</r1>
+<r2>should be watched with family</r2>
+<r3>worth every penny!</r3>
+
+</review>
+
+</movie>
+
+<movie>
+
+<movieName image="infinity.jpg">Avengers Infinity War </movieName>
+<moviePlot>The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.</moviePlot>
+
+<cast>
+
+<name1>Robert Downey Jr</name1>
+<name2>Chris Pratt</name2>
+<name3>Chris Evans</name3>
+
+
+</cast>
+
+<review>
+<r1>The direction was spot on!</r1>
+<r2>would recommend</r2>
+<r3>nice!loved the action on this one</r3>
+
+</review>
+
+
+
+
+</movie>
+
+<movie>
+
+<movieName image="fight.jpg">Fight Club</movieName>
+
+<moviePlot>An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soapmaker, forming an underground fight club that evolves into something much, much more.</moviePlot>
+
+<cast>
+<name1>Brad Pitt</name1>
+<name2>Edward Norton</name2>
+<name3>Meat Loaf</name3>
+</cast>
+
+<review>
+<r1>A very cool movie!</r1>
+<r2>Must Watch</r2>
+<r3>the experience is awesome!would recommend</r3>
+</review>
+
+</movie>
+
+
+
+
+
+</walimanr>

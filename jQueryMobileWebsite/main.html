@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="">
+      <title></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="themes/walimanr.css" />
+      <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script type="text/javascript">
+         $.ajax({
+           url:'file:///D:/Assignment2/info.xml',
+           data:{},
+           type:'GET',
+           dataType:'xml',
+
+
+           success: function(data){
+
+           var title ='<h1>'+$(data).find('title').text()+'</h1>';
+           $("#topSection").append(title);
+
+           var myInfo='<p>'+$(data).find('Name').text()+'-'+$(data).find('Name').attr('studentNumber')+'</p></br>'+$(data).find('Name').attr('Program');
+          $("#lowerSection").append(myInfo);
+          $("#lowerSection1").append(myInfo);
+          $("#lowerSection2").append(myInfo);
+          $("#lowerSection3").append(myInfo);
+
+          var movName1='<p>'+$(data).find('movieName:eq(0)').text()+'</p>';
+          $("#topSecton1").append(movName1);
+
+          var movName2='<p>'+$(data).find('movieName:eq(1)').text()+'</p>';
+          $("#topSecton2").append(movName2);
+
+          var movName3='<p>'+$(data).find('movieName:eq(2)').text()+'</p>';
+          $("#topSecton3").append(movName3);
+
+          var shawImg='<img id=\"pic\" src=\"'+$(data).find('movieName:eq(0)').attr('image')+'\" alt=\"Shawshank Redemption\">';
+          $("#img1").append(shawImg);
+
+          var infiImage='<img id=\"pic\" src=\"'+$(data).find('movieName:eq(1)').attr('image')+'\" alt=\"Avengers Infinity War\">';
+          $("#img2").append(infiImage);
+
+          var fightImage='<img id=\"pic\" src=\"'+$(data).find('movieName:eq(2)').attr('image')+'\" alt=\"Avengers Infinity War\">';
+          $("#img3").append(fightImage);
+
+          var cast1Info='<p>Some Of the Cast Members Include</p><ul><li>'+$(data).find('cast name1:eq(0)').text()+'</li>'+'<li>'+$(data).find('cast name2:eq(0)').text()+'</li><li>'+$(data).find('cast name3:eq(0)').text()+'</li></ul>';
+          $("#castList1").append(cast1Info);
+
+          var cast2Info='<p>Some Of the Cast Members Include</p><ul><li>'+$(data).find('cast name1:eq(1)').text()+'</li>'+'<li>'+$(data).find('cast name2:eq(1)').text()+'</li><li>'+$(data).find('cast name3:eq(1)').text()+'</li></ul>';
+          $("#castList2").append(cast2Info);
+
+          var cast3Info='<p>Some Of the Cast Members Include</p><ul><li>'+$(data).find('cast name1:eq(2)').text()+'</li>'+'<li>'+$(data).find('cast name2:eq(2)').text()+'</li><li>'+$(data).find('cast name3:eq(2)').text()+'</li></ul>';
+          $("#castList3").append(cast3Info);
+
+          var mov1Info='<p>'+$(data).find('moviePlot:eq(0)').text()+'</p>';
+          $("#moviePlot1").append(mov1Info);
+
+          var mov2Info='<p>'+$(data).find('moviePlot:eq(1)').text()+'</p>';
+          $("#moviePlot2").append(mov2Info);
+
+          var mov3Info='<p>'+$(data).find('moviePlot:eq(2)').text()+'</p>';
+          $("#moviePlot3").append(mov3Info);
+
+
+          var rev1Info='<p>Here are Some Reviews:</p><ul><li>'+$(data).find('review r1:eq(0)').text()+'</li>'+'<li>'+$(data).find('review r2:eq(0)').text()+'</li><li>'+$(data).find('review r3:eq(0)').text()+'</li></ul>';
+          $("#movieReview1").append(rev1Info);
+
+          var rev2Info='<p>Here are Some Reviews:</p><ul><li>'+$(data).find('review r1:eq(1)').text()+'</li>'+'<li>'+$(data).find('review r2:eq(1)').text()+'</li><li>'+$(data).find('review r3:eq(1)').text()+'</li></ul>';
+          $("#movieReview2").append(rev2Info);
+
+          var rev3Info='<p>Here are Some Reviews:</p><ul><li>'+$(data).find('review r1:eq(2)').text()+'</li>'+'<li>'+$(data).find('review r2:eq(2)').text()+'</li><li>'+$(data).find('review r3:eq(2)').text()+'</li></ul>';
+          $("#movieReview3").append(rev3Info);
+
+
+          }
+
+
+
+         });
+
+
+      </script>
+   </head>
+   <body>
+      <div id ="homePage" data-role='page' data-theme='d'>
+         <div id="top" data-role='header'>
+           <h1 id="topSection"></h1>
+         </div>
+         <div  class="ui-content" data-role='main'>
+           <div class="links" style="text-align:center">
+             <a href="#mov1">Shawshank Redemption</a><br>
+             <a href="#mov2">Avengers Infinity War</a><br>
+             <a href="#mov3">Fight Club</a>
+           </div>
+
+         </div>
+         <div  data-role='footer' data-position="fixed">
+            <h1 id="lowerSection"></h1>
+         </div>
+      </div>
+
+
+      <div id ="mov1" data-role='page' data-theme='d'>
+         <div id="top" data-role='header'>
+            <h1 id="topSecton1"></h1>
+            <div id="img1">
+
+            </div>
+         </div>
+         <div id="midSection" data-role='main'  class=“ui-content”>
+           <div id="moviePlot1">
+
+           </div>
+
+            <div id="castList1">
+
+            </div>
+
+            <div id="movieReview1">
+
+            </div>
+            <a href="https://www.imdb.com/title/tt0111161/?ref_=adv_li_tt" class="ui-btn">IMDB</a>
+            <a href="https://store.cineplex.com/Product/the-shawshank-redemption" class="ui-btn">Cineplex Theater</a>
+            <a href="#homePage" class="ui-btn">Home</a>
+         </div>
+
+         <div  data-role='footer'>
+            <h1 id="lowerSection1"></h1>
+         </div>
+      </div>
+
+
+
+      <div id ="mov2" data-role='page' data-theme='d'>
+         <div id="top" data-role='header'>
+            <h1 id="topSecton2"></h1>
+         </div>
+
+         <div id="img2">
+
+         </div>
+
+         <div id="midSection" data-role='main'  class=“ui-content”>
+           <div id="moviePlot2">
+           </div>
+
+            <div id="castList2">
+            </div>
+
+            <div id="movieReview2">
+            </div>
+            <a href="https://www.imdb.com/title/tt4154756/?ref_=nv_sr_1" class="ui-btn">Avengers Infinity War</a>
+            <a href="https://store.cineplex.com/Product/avengers-infinity-war" class="ui-btn">Cineplex Theater</a>
+            <a href="#homePage" class="ui-btn">Home</a>
+         </div>
+         <div data-role='footer' >
+            <h1 id="lowerSection2"></h1>
+         </div>
+      </div>
+
+
+      <div id ="mov3" data-role='page' data-theme='d'>
+         <div id="top" data-role='header'>
+            <h1 id="topSecton3"></h1>
+
+            <div id="img3">
+
+            </div>
+         </div>
+         <div id="midSection" data-role='main'  class="ui-content">
+
+           <div id="moviePlot3">
+           </div>
+
+            <div id="castList3">
+            </div>
+
+            <div id="movieReview3">
+            </div>
+            <a href="https://www.imdb.com/title/tt0137523/?ref_=nv_sr_2" class="ui-btn">Fight Club</a>
+            <a href="https://store.cineplex.com/Product/fight-club" class="ui-btn">Cineplex Theater</a>
+            <a href="#homePage" class="ui-btn">Home</a>
+         </div>
+         <div data-role='footer' >
+            <h1 id="lowerSection3"></h1>
+         </div>
+      </div>
+   </body>
+</html>
